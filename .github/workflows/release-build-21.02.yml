@@ -1,4 +1,4 @@
-name: helloworld x86-64
+name: helloworld x86-generic
 
 on:
   repository_dispatch:
@@ -17,7 +17,7 @@ jobs:
       fail-fast: false
       matrix:
         arch:
-          - x86_64
+          - i386-pentium4
 
     steps:
       - uses: actions/checkout@v3
@@ -27,7 +27,7 @@ jobs:
       - name: Build
         uses: sbwml/openwrt-gh-action-sdk@go1.20
         env:
-          ARCH: ${{ matrix.arch }}-openwrt-21.02
+          ARCH: ${{ matrix.arch }}-openwrt-22.03.03
           FEEDNAME: packages_ci
           PACKAGES: luci-app-${{ github.event.inputs.tag }}
           NO_REFRESH_CHECK: true
