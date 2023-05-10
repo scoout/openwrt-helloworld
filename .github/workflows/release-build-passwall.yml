@@ -1,4 +1,4 @@
-name: passwall x86-64
+name: passwall x86-generic
 
 on:
   repository_dispatch:
@@ -12,7 +12,7 @@ jobs:
       fail-fast: false
       matrix:
         arch:
-          - x86_64
+          - i386_pentium4
 
     steps:
       - uses: actions/checkout@v3
