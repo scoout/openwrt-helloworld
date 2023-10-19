@@ -17,7 +17,7 @@ jobs:
       fail-fast: false
       matrix:
         arch:
-          - i386_pentium4
+          - x86_64
 
     steps:
       - uses: actions/checkout@v3
@@ -27,7 +27,7 @@ jobs:
       - name: Build
         uses: sbwml/openwrt-gh-action-sdk@go1.21
         env:
-          ARCH: ${{ matrix.arch }}-openwrt-21.02
+          ARCH: ${{ matrix.arch }}-openwrt-23.05.0
           FEEDNAME: packages_ci
           PACKAGES: ${{ github.event.inputs.tag }}
           NO_REFRESH_CHECK: true
