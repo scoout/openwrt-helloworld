@@ -24,7 +24,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}-openwrt-23.05
           FEEDNAME: packages_ci
-          PACKAGES:  luci-app-passwall chinadns-ng xray-plugin autocorex86
+          PACKAGES: autocore
           NO_REFRESH_CHECK: true
       - name: Time Work
         run:
