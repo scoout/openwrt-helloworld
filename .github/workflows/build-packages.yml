@@ -13,12 +13,12 @@ jobs:
       fail-fast: false
       matrix:
         arch:
-           - i386_pentium4
+           - x86_64
           
 
         tag:
 
-          - openwrt-22.03
+          - openwrt-23.05.0
 
     steps:
       - uses: actions/checkout@v3
