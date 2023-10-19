@@ -27,7 +27,7 @@ jobs:
       - name: Build
         uses: sbwml/openwrt-gh-action-sdk@go1.21
         env:
-          ARCH: ${{ matrix.arch }}-openwrt-23.05.0
+          ARCH: ${{ matrix.arch }}-openwrt-23.05
           FEEDNAME: packages_ci
           PACKAGES: ${{ github.event.inputs.tag }}
           NO_REFRESH_CHECK: true
