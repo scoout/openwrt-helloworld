@@ -22,7 +22,7 @@ jobs:
       - name: Build
         uses: sbwml/openwrt-gh-action-sdk@helloworld
         env:
-          ARCH: ${{ matrix.arch }}-openwrt-23.05.0
+          ARCH: ${{ matrix.arch }}-openwrt-23.05
           FEEDNAME: packages_ci
           PACKAGES:  luci-app-passwall chinadns-ng xray-plugin
           NO_REFRESH_CHECK: true
